@@ -1,0 +1,14 @@
+<div class="container" fxLayout ="column">
+    <button class="close" mat-button (click)="onClose()">X</button>
+
+        
+    <div  fxLayout="row" fxLayoutGap="20px">
+        <div *ngFor="let app of apps" >
+            <a href="{{app.link}}"><img src="../../assets/Icons/{{app.icon}}.png" width="70" 
+                height="70">
+            </a>
+        </div>
+        
+    </div>
+
+</div>

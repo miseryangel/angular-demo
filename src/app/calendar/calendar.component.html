@@ -1,0 +1,17 @@
+<div>
+    <button class="close" mat-button (click)="onClose()">X</button>
+            
+    <div fxLayoutAlign="space-around center">
+        <h2>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h2>
+    </div>
+    
+    <mwl-calendar-month-view
+    [viewDate]="viewDate"
+    >
+    </mwl-calendar-month-view>
+
+            
+
+            
+
+</div>

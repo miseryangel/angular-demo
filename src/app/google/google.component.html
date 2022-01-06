@@ -1,0 +1,9 @@
+
+<div fxLayoutAlign="center">
+    <input search [(ngModel)] = "data" 
+            (keyup.enter)="search()" 
+            [style.width.px]="800" 
+            [style.height.px]="25"
+            placeholder="google"/>
+    <button mat-button (click)="search()"><mat-icon>search</mat-icon></button>
+</div>

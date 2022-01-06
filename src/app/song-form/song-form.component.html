@@ -1,0 +1,50 @@
+<div class="container" fxLayout ="column">
+    <button class="close" mat-button (click)="onClose()">X</button>
+    <mat-grid-list cols="1" rowHeight="30px">
+        <mat-grid-tile >
+            <mat-form-field appearance="legacy" >
+                <mat-label >title</mat-label>
+                <input type="text" matInput [(ngModel)]="song.title" >
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list >
+    <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile >
+            <mat-form-field>
+                <textarea matInput [(ngModel)]="song.cover"></textarea>
+                <mat-placeholder>
+                    <span>cover link</span>
+                 </mat-placeholder>
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile >
+            <mat-form-field>
+                <textarea matInput [(ngModel)]="song.url"></textarea>
+                <mat-placeholder>
+                    <span>song link</span>
+                 </mat-placeholder>
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="1" rowHeight="50px">
+        <mat-grid-tile >
+            <button mat-raised-button (click)="onSubmit()">add song</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <div fxFlex *ngFor="let curSong of songs;let indexOfelement=index">
+        <mat-grid-list cols="5" rowHeight="30px">
+            <mat-grid-tile [colspan] ="4">
+                <div *ngIf = "curSong.title.length > 15; else elseBlock">{{curSong.title | slice:0:10}}...</div>
+                <ng-template #elseBlock>{{curSong.title}}</ng-template>
+            </mat-grid-tile>
+
+            <mat-grid-tile >
+                <button mat-button (click)="deleteSong(indexOfelement)"><mat-icon>delete</mat-icon></button>
+            </mat-grid-tile>
+        </mat-grid-list>
+        
+    </div>
+</div>

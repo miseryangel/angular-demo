@@ -1,0 +1,52 @@
+<div>
+    <button class="close" mat-button (click)="onClose()">X</button>
+    <mat-grid-list cols="5" fxLayoutAlign="space-around center">
+        <ng-container *ngFor = "let dailyForecast of weeklyForecast;index as indexOfelement;">
+            
+            <mat-grid-tile fxLayoutAlign="space-around center">
+                <div *ngIf="day; else elseBlock">
+                    <div fxLayout="column">
+                        <div fxLayoutAlign="space-around center">
+                            <h3>{{ getDate(indexOfelement+1) | date: 'EEEE' }}</h3>
+                        </div>
+                        <div fxLayoutAlign="space-around center">
+                            <img  class="images" src="../assets/WeatherIcon/{{dailyForecast.Day.Icon}}.png" alt = {{dailyForecast.Day.Icon}} width="60" height="50"/>
+                        </div>
+                        <div fxLayoutAlign="space-around center">
+                            <h3>{{dailyForecast.Day.IconPhrase}}</h3>
+                        </div>
+                        <div fxLayoutAlign="space-around center" >
+                            <h3>{{dailyForecast.Temperature.Minimum.Value}}{{dailyForecast.Temperature.Minimum.Unit}} ~ {{dailyForecast.Temperature.Maximum.Value}}{{dailyForecast.Temperature.Maximum.Unit}} </h3>
+                        </div>
+                    </div>
+                </div>
+                <ng-template #elseBlock>
+                    <div fxLayout="column">
+                        <div fxLayoutAlign="space-around center">
+                            <h3>{{ getDate(indexOfelement+1) | date: 'EEEE' }}</h3>
+                        </div>
+                        <div fxLayoutAlign="space-around center">
+                            <img  class="images" src="../assets/WeatherIcon/{{dailyForecast.Night.Icon}}.png" alt = {{dailyForecast.Night.Icon}} width="60" height="50"/>
+                        </div>
+                        <div fxLayoutAlign="space-around center">
+                            <h3>{{dailyForecast.Night.IconPhrase}}</h3>
+                        </div>
+                        <div fxLayoutAlign="space-around center" >
+                            <h3>{{dailyForecast.Temperature.Minimum.Value}}{{dailyForecast.Temperature.Minimum.Unit}} ~ {{dailyForecast.Temperature.Maximum.Value}}{{dailyForecast.Temperature.Maximum.Unit}} </h3>
+                        </div>
+                    </div>
+                </ng-template>
+
+                
+            </mat-grid-tile>
+
+        </ng-container>
+        
+    </mat-grid-list>
+    <div fxLayoutAlign="space-around center">
+        <mat-slide-toggle (change)="toggle($event)">{{day?"Day":"Night"}}</mat-slide-toggle>
+    </div>
+    
+    
+    
+</div>

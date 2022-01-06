@@ -1,0 +1,25 @@
+
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0" *ngIf="localWeather" (click)="openForecast()">
+    <div fxFlex="40" >
+        <img  class="images" src="../assets/WeatherIcon/{{localWeather.WeatherIcon}}.png" alt = {{localWeather.WeatherIcon}} width="120" height="100"/>
+    </div>
+    <div fxLayout="column">
+        <div fxLayoutAlign="space-around center">
+            <h3>{{localWeather.Temperature.Imperial.Value}}{{localWeather.Temperature.Imperial.Unit}}  </h3>
+        </div>
+        <div fxLayoutAlign="space-around center">
+            <div>{{localWeather.WeatherText}}</div>
+        </div>
+        <div fxLayoutAlign="space-around center">
+            <div>{{cityName}}</div>
+        </div>
+        
+        
+    </div>
+</div>

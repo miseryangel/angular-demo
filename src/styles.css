@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+html, body { 
+    height: 100%;
+    color: white;
+ }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; padding: 30px; }
+
+html { 
+    background: url("https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container{
+    margin: 20px;
+    display: flex;
+}
+
+.desk-button{
+    display: table-cell;
+    width: 490px;
+}
+
+.desk-label{
+    font-size:1.4em;
+    font-family: 'Gill Sans', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* style for notepad button */
+.cdk-overlay-pane.my-dialog {
+    position: relative!important;
+}
+.close.mat-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+}
+
+.close-button{
+    float: right;
+    top:0;
+}
+
+.open.mat-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+}
+
+.notepad-label{
+    height: 20px;
+    width: 100px;
+}
+.notepad-color{
+    height: 55px;
+    width: 100px;
+}
+
+.trigger {
+    color: red;
+}
+
+.mat-grid-tile{
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+.icon-display {
+    transform: scale(2);
+}
+
+.app-icon{
+    color: aqua !important;
+}
