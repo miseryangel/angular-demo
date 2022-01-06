@@ -4,6 +4,6 @@ all code is in branch master. this is a simple demo angular project. The file sy
 
 to run this program:
                 <br>git init
-                git pull https://github.com/miseryangel/angular-demo.git master
-                npm install
-                npm start
+                <br>git pull https://github.com/miseryangel/angular-demo.git master
+                <br>npm install
+                <br>npm start
