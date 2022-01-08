@@ -23,8 +23,8 @@ export class AppFolderComponent implements OnInit {
       autoFocus: true,
       panelClass: 'my-dialog',
       position : {
-        'bottom':'170px',
-        left: '20px',
+        'bottom':'50px',
+        left: '40px',
       },
     });
 

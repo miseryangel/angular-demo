@@ -40,8 +40,8 @@ export class AudioplayerComponent implements OnInit {
       disableClose: true,
       autoFocus: true,
       position : {
-        'top':'100px',
-        left: '0',
+        'top':'130px',
+        left: '35px',
       },
       data:{audioList: this.audioList},
       panelClass: 'my-dialog',
